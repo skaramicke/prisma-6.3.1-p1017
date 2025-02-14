@@ -6,4 +6,4 @@ resources:
 
 images:
   - name: postgres
-    newTag: "10.0"
+    newTag: "17.0"
