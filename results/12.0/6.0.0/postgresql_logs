@@ -26,11 +26,11 @@ Success. You can now start the database server using:
 initdb: warning: enabling "trust" authentication for local connections
 You can change this by editing pg_hba.conf or using the option -A, or
 --auth-local and --auth-host, the next time you run initdb.
-waiting for server to start....2025-02-14 09:07:27.750 UTC [46] LOG:  starting PostgreSQL 12.0 (Debian 12.0-2.pgdg100+1) on aarch64-unknown-linux-gnu, compiled by gcc (Debian 8.3.0-6) 8.3.0, 64-bit
-2025-02-14 09:07:27.751 UTC [46] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
-2025-02-14 09:07:27.764 UTC [47] LOG:  database system was shut down at 2025-02-14 09:07:27 UTC
-2025-02-14 09:07:27.769 UTC [46] LOG:  database system is ready to accept connections
-2025-02-14 09:07:27.806 UTC [60] FATAL:  database "mydb" does not exist
+waiting for server to start....2025-02-14 13:18:34.594 UTC [53] LOG:  starting PostgreSQL 12.0 (Debian 12.0-2.pgdg100+1) on aarch64-unknown-linux-gnu, compiled by gcc (Debian 8.3.0-6) 8.3.0, 64-bit
+2025-02-14 13:18:34.595 UTC [53] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+2025-02-14 13:18:34.602 UTC [54] LOG:  database system was shut down at 2025-02-14 13:18:34 UTC
+2025-02-14 13:18:34.605 UTC [53] LOG:  database system is ready to accept connections
+2025-02-14 13:18:34.608 UTC [61] FATAL:  database "mydb" does not exist
  done
 server started
 CREATE DATABASE
@@ -38,19 +38,19 @@ CREATE DATABASE
 
 /usr/local/bin/docker-entrypoint.sh: ignoring /docker-entrypoint-initdb.d/*
 
-waiting for server to shut down...2025-02-14 09:07:27.942 UTC [46] LOG:  received fast shutdown request
-.2025-02-14 09:07:27.943 UTC [46] LOG:  aborting any active transactions
-2025-02-14 09:07:27.944 UTC [46] LOG:  background worker "logical replication launcher" (PID 53) exited with exit code 1
-2025-02-14 09:07:27.945 UTC [48] LOG:  shutting down
-2025-02-14 09:07:27.956 UTC [46] LOG:  database system is shut down
+2025-02-14 13:18:34.832 UTC [53] LOG:  received fast shutdown request
+waiting for server to shut down....2025-02-14 13:18:34.832 UTC [53] LOG:  aborting any active transactions
+2025-02-14 13:18:34.833 UTC [53] LOG:  background worker "logical replication launcher" (PID 60) exited with exit code 1
+2025-02-14 13:18:34.834 UTC [55] LOG:  shutting down
+2025-02-14 13:18:34.843 UTC [53] LOG:  database system is shut down
  done
 server stopped
 
 PostgreSQL init process complete; ready for start up.
 
-2025-02-14 09:07:28.051 UTC [1] LOG:  starting PostgreSQL 12.0 (Debian 12.0-2.pgdg100+1) on aarch64-unknown-linux-gnu, compiled by gcc (Debian 8.3.0-6) 8.3.0, 64-bit
-2025-02-14 09:07:28.051 UTC [1] LOG:  listening on IPv4 address "0.0.0.0", port 5432
-2025-02-14 09:07:28.051 UTC [1] LOG:  listening on IPv6 address "::", port 5432
-2025-02-14 09:07:28.054 UTC [1] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
-2025-02-14 09:07:28.062 UTC [71] LOG:  database system was shut down at 2025-02-14 09:07:27 UTC
-2025-02-14 09:07:28.069 UTC [1] LOG:  database system is ready to accept connections
+2025-02-14 13:18:34.940 UTC [1] LOG:  starting PostgreSQL 12.0 (Debian 12.0-2.pgdg100+1) on aarch64-unknown-linux-gnu, compiled by gcc (Debian 8.3.0-6) 8.3.0, 64-bit
+2025-02-14 13:18:34.940 UTC [1] LOG:  listening on IPv4 address "0.0.0.0", port 5432
+2025-02-14 13:18:34.941 UTC [1] LOG:  listening on IPv6 address "::", port 5432
+2025-02-14 13:18:34.942 UTC [1] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+2025-02-14 13:18:34.952 UTC [72] LOG:  database system was shut down at 2025-02-14 13:18:34 UTC
+2025-02-14 13:18:34.955 UTC [1] LOG:  database system is ready to accept connections

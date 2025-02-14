@@ -18,18 +18,18 @@ running bootstrap script ... ok
 performing post-bootstrap initialization ... ok
 syncing data to disk ... ok
 
-initdb: warning: enabling "trust" authentication for local connections
 
-You can change this by editing pg_hba.conf or using the option -A, or
---auth-local and --auth-host, the next time you run initdb.
 Success. You can now start the database server using:
 
     pg_ctl -D /var/lib/postgresql/data/pgdata -l logfile start
 
-waiting for server to start....2025-02-14 09:04:21.224 UTC [47] LOG:  starting PostgreSQL 12.0 (Debian 12.0-2.pgdg100+1) on aarch64-unknown-linux-gnu, compiled by gcc (Debian 8.3.0-6) 8.3.0, 64-bit
-2025-02-14 09:04:21.225 UTC [47] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
-2025-02-14 09:04:21.237 UTC [48] LOG:  database system was shut down at 2025-02-14 09:04:21 UTC
-2025-02-14 09:04:21.241 UTC [47] LOG:  database system is ready to accept connections
+initdb: warning: enabling "trust" authentication for local connections
+You can change this by editing pg_hba.conf or using the option -A, or
+--auth-local and --auth-host, the next time you run initdb.
+waiting for server to start....2025-02-14 13:15:35.959 UTC [47] LOG:  starting PostgreSQL 12.0 (Debian 12.0-2.pgdg100+1) on aarch64-unknown-linux-gnu, compiled by gcc (Debian 8.3.0-6) 8.3.0, 64-bit
+2025-02-14 13:15:35.960 UTC [47] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+2025-02-14 13:15:35.975 UTC [48] LOG:  database system was shut down at 2025-02-14 13:15:35 UTC
+2025-02-14 13:15:35.978 UTC [47] LOG:  database system is ready to accept connections
  done
 server started
 CREATE DATABASE
@@ -37,29 +37,29 @@ CREATE DATABASE
 
 /usr/local/bin/docker-entrypoint.sh: ignoring /docker-entrypoint-initdb.d/*
 
-waiting for server to shut down...2025-02-14 09:04:21.404 UTC [47] LOG:  received fast shutdown request
-.2025-02-14 09:04:21.405 UTC [47] LOG:  aborting any active transactions
-2025-02-14 09:04:21.406 UTC [47] LOG:  background worker "logical replication launcher" (PID 54) exited with exit code 1
-2025-02-14 09:04:21.406 UTC [49] LOG:  shutting down
-2025-02-14 09:04:21.412 UTC [47] LOG:  database system is shut down
+2025-02-14 13:15:36.127 UTC [47] LOG:  received fast shutdown request
+waiting for server to shut down....2025-02-14 13:15:36.128 UTC [47] LOG:  aborting any active transactions
+2025-02-14 13:15:36.129 UTC [47] LOG:  background worker "logical replication launcher" (PID 54) exited with exit code 1
+2025-02-14 13:15:36.129 UTC [49] LOG:  shutting down
+2025-02-14 13:15:36.137 UTC [47] LOG:  database system is shut down
  done
 server stopped
 
 PostgreSQL init process complete; ready for start up.
 
-2025-02-14 09:04:21.512 UTC [1] LOG:  starting PostgreSQL 12.0 (Debian 12.0-2.pgdg100+1) on aarch64-unknown-linux-gnu, compiled by gcc (Debian 8.3.0-6) 8.3.0, 64-bit
-2025-02-14 09:04:21.512 UTC [1] LOG:  listening on IPv4 address "0.0.0.0", port 5432
-2025-02-14 09:04:21.512 UTC [1] LOG:  listening on IPv6 address "::", port 5432
-2025-02-14 09:04:21.516 UTC [1] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
-2025-02-14 09:04:21.524 UTC [65] LOG:  database system was shut down at 2025-02-14 09:04:21 UTC
-2025-02-14 09:04:21.527 UTC [1] LOG:  database system is ready to accept connections
-2025-02-14 09:04:27.995 UTC [80] ERROR:  relation "_prisma_migrations" does not exist at character 126
-2025-02-14 09:04:27.995 UTC [80] STATEMENT:  SELECT "id", "checksum", "finished_at", "migration_name", "logs", "rolled_back_at", "started_at", "applied_steps_count" FROM "_prisma_migrations" ORDER BY "started_at" ASC
-2025-02-14 09:04:28.128 UTC [80] ERROR:  syntax error at or near "WITH" at character 89
-2025-02-14 09:04:28.128 UTC [80] STATEMENT:  DROP DATABASE IF EXISTS "prisma_migrate_shadow_db_fa8f685a-8f48-4f20-8d84-194480732624" WITH (FORCE)
-2025-02-14 09:04:28.336 UTC [80] ERROR:  syntax error at or near "WITH" at character 89
-2025-02-14 09:04:28.336 UTC [80] STATEMENT:  DROP DATABASE IF EXISTS "prisma_migrate_shadow_db_1ef417e1-2276-4066-a607-936ee7c33d5d" WITH (FORCE)
-2025-02-14 09:04:28.561 UTC [80] ERROR:  syntax error at or near "WITH" at character 89
-2025-02-14 09:04:28.561 UTC [80] STATEMENT:  DROP DATABASE IF EXISTS "prisma_migrate_shadow_db_27f9159f-bd68-4a90-b238-088be103d537" WITH (FORCE)
-2025-02-14 09:04:28.755 UTC [80] ERROR:  syntax error at or near "WITH" at character 89
-2025-02-14 09:04:28.755 UTC [80] STATEMENT:  DROP DATABASE IF EXISTS "prisma_migrate_shadow_db_42a8a22a-eab2-4d72-b0f4-951d331f9c52" WITH (FORCE)
+2025-02-14 13:15:36.236 UTC [1] LOG:  starting PostgreSQL 12.0 (Debian 12.0-2.pgdg100+1) on aarch64-unknown-linux-gnu, compiled by gcc (Debian 8.3.0-6) 8.3.0, 64-bit
+2025-02-14 13:15:36.236 UTC [1] LOG:  listening on IPv4 address "0.0.0.0", port 5432
+2025-02-14 13:15:36.236 UTC [1] LOG:  listening on IPv6 address "::", port 5432
+2025-02-14 13:15:36.238 UTC [1] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+2025-02-14 13:15:36.244 UTC [65] LOG:  database system was shut down at 2025-02-14 13:15:36 UTC
+2025-02-14 13:15:36.247 UTC [1] LOG:  database system is ready to accept connections
+2025-02-14 13:15:43.107 UTC [80] ERROR:  relation "_prisma_migrations" does not exist at character 126
+2025-02-14 13:15:43.107 UTC [80] STATEMENT:  SELECT "id", "checksum", "finished_at", "migration_name", "logs", "rolled_back_at", "started_at", "applied_steps_count" FROM "_prisma_migrations" ORDER BY "started_at" ASC
+2025-02-14 13:15:43.243 UTC [80] ERROR:  syntax error at or near "WITH" at character 89
+2025-02-14 13:15:43.243 UTC [80] STATEMENT:  DROP DATABASE IF EXISTS "prisma_migrate_shadow_db_c8fc3ac7-8b1e-491c-a30f-e45bd14072f9" WITH (FORCE)
+2025-02-14 13:15:43.531 UTC [80] ERROR:  syntax error at or near "WITH" at character 89
+2025-02-14 13:15:43.531 UTC [80] STATEMENT:  DROP DATABASE IF EXISTS "prisma_migrate_shadow_db_91b5610b-5fde-4e19-858e-302603294161" WITH (FORCE)
+2025-02-14 13:15:43.796 UTC [80] ERROR:  syntax error at or near "WITH" at character 89
+2025-02-14 13:15:43.796 UTC [80] STATEMENT:  DROP DATABASE IF EXISTS "prisma_migrate_shadow_db_4a80e3f3-e751-49a6-b7eb-51138c695317" WITH (FORCE)
+2025-02-14 13:15:44.025 UTC [80] ERROR:  syntax error at or near "WITH" at character 89
+2025-02-14 13:15:44.025 UTC [80] STATEMENT:  DROP DATABASE IF EXISTS "prisma_migrate_shadow_db_9353d706-8421-4d7d-bba3-271fa218ef0b" WITH (FORCE)

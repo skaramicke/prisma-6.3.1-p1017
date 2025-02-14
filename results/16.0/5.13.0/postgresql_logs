@@ -29,19 +29,19 @@ selecting default time zone ... Etc/UTC
 creating configuration files ... ok
 running bootstrap script ... ok
 performing post-bootstrap initialization ... ok
+syncing data to disk ... ok
 initdb: warning: enabling "trust" authentication for local connections
 initdb: hint: You can change this by editing pg_hba.conf or using the option -A, or --auth-local and --auth-host, the next time you run initdb.
-syncing data to disk ... ok
 
 
 Success. You can now start the database server using:
 
     pg_ctl -D /var/lib/postgresql/data/pgdata -l logfile start
 
-waiting for server to start....2025-02-14 09:25:12.978 UTC [52] LOG:  starting PostgreSQL 16.0 (Debian 16.0-1.pgdg120+1) on aarch64-unknown-linux-gnu, compiled by gcc (Debian 12.2.0-14) 12.2.0, 64-bit
-2025-02-14 09:25:12.980 UTC [52] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
-2025-02-14 09:25:12.983 UTC [55] LOG:  database system was shut down at 2025-02-14 09:25:12 UTC
-2025-02-14 09:25:12.987 UTC [52] LOG:  database system is ready to accept connections
+waiting for server to start....2025-02-14 13:30:55.349 UTC [52] LOG:  starting PostgreSQL 16.0 (Debian 16.0-1.pgdg120+1) on aarch64-unknown-linux-gnu, compiled by gcc (Debian 12.2.0-14) 12.2.0, 64-bit
+2025-02-14 13:30:55.350 UTC [52] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+2025-02-14 13:30:55.352 UTC [55] LOG:  database system was shut down at 2025-02-14 13:30:55 UTC
+2025-02-14 13:30:55.355 UTC [52] LOG:  database system is ready to accept connections
  done
 server started
 CREATE DATABASE
@@ -49,26 +49,26 @@ CREATE DATABASE
 
 /usr/local/bin/docker-entrypoint.sh: ignoring /docker-entrypoint-initdb.d/*
 
-waiting for server to shut down....2025-02-14 09:25:13.159 UTC [52] LOG:  received fast shutdown request
-2025-02-14 09:25:13.160 UTC [52] LOG:  aborting any active transactions
-2025-02-14 09:25:13.162 UTC [52] LOG:  background worker "logical replication launcher" (PID 58) exited with exit code 1
-2025-02-14 09:25:13.163 UTC [53] LOG:  shutting down
-2025-02-14 09:25:13.164 UTC [53] LOG:  checkpoint starting: shutdown immediate
-2025-02-14 09:25:13.209 UTC [53] LOG:  checkpoint complete: wrote 923 buffers (5.6%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.019 s, sync=0.024 s, total=0.046 s; sync files=301, longest=0.007 s, average=0.001 s; distance=4257 kB, estimate=4257 kB; lsn=0/1913040, redo lsn=0/1913040
-2025-02-14 09:25:13.214 UTC [52] LOG:  database system is shut down
+waiting for server to shut down....2025-02-14 13:30:55.528 UTC [52] LOG:  received fast shutdown request
+2025-02-14 13:30:55.530 UTC [52] LOG:  aborting any active transactions
+2025-02-14 13:30:55.532 UTC [52] LOG:  background worker "logical replication launcher" (PID 58) exited with exit code 1
+2025-02-14 13:30:55.532 UTC [53] LOG:  shutting down
+2025-02-14 13:30:55.532 UTC [53] LOG:  checkpoint starting: shutdown immediate
+2025-02-14 13:30:55.565 UTC [53] LOG:  checkpoint complete: wrote 923 buffers (5.6%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.011 s, sync=0.020 s, total=0.033 s; sync files=301, longest=0.004 s, average=0.001 s; distance=4257 kB, estimate=4257 kB; lsn=0/1913040, redo lsn=0/1913040
+2025-02-14 13:30:55.568 UTC [52] LOG:  database system is shut down
  done
 server stopped
 
 PostgreSQL init process complete; ready for start up.
 
-2025-02-14 09:25:13.275 UTC [1] LOG:  starting PostgreSQL 16.0 (Debian 16.0-1.pgdg120+1) on aarch64-unknown-linux-gnu, compiled by gcc (Debian 12.2.0-14) 12.2.0, 64-bit
-2025-02-14 09:25:13.275 UTC [1] LOG:  listening on IPv4 address "0.0.0.0", port 5432
-2025-02-14 09:25:13.275 UTC [1] LOG:  listening on IPv6 address "::", port 5432
-2025-02-14 09:25:13.277 UTC [1] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
-2025-02-14 09:25:13.280 UTC [68] LOG:  database system was shut down at 2025-02-14 09:25:13 UTC
-2025-02-14 09:25:13.286 UTC [1] LOG:  database system is ready to accept connections
-2025-02-14 09:25:19.973 UTC [80] ERROR:  relation "_prisma_migrations" does not exist at character 126
-2025-02-14 09:25:19.973 UTC [80] STATEMENT:  SELECT "id", "checksum", "finished_at", "migration_name", "logs", "rolled_back_at", "started_at", "applied_steps_count" FROM "_prisma_migrations" ORDER BY "started_at" ASC
-2025-02-14 09:25:20.070 UTC [81] FATAL:  terminating connection due to administrator command
-2025-02-14 09:25:20.177 UTC [66] LOG:  checkpoint starting: immediate force wait
-2025-02-14 09:25:20.243 UTC [66] LOG:  checkpoint complete: wrote 6 buffers (0.0%); 1 WAL file(s) added, 0 removed, 0 recycled; write=0.008 s, sync=0.003 s, total=0.066 s; sync files=5, longest=0.002 s, average=0.001 s; distance=4258 kB, estimate=4258 kB; lsn=0/1D3B8E0, redo lsn=0/1D3B8A8
+2025-02-14 13:30:55.647 UTC [1] LOG:  starting PostgreSQL 16.0 (Debian 16.0-1.pgdg120+1) on aarch64-unknown-linux-gnu, compiled by gcc (Debian 12.2.0-14) 12.2.0, 64-bit
+2025-02-14 13:30:55.647 UTC [1] LOG:  listening on IPv4 address "0.0.0.0", port 5432
+2025-02-14 13:30:55.647 UTC [1] LOG:  listening on IPv6 address "::", port 5432
+2025-02-14 13:30:55.649 UTC [1] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+2025-02-14 13:30:55.652 UTC [68] LOG:  database system was shut down at 2025-02-14 13:30:55 UTC
+2025-02-14 13:30:55.656 UTC [1] LOG:  database system is ready to accept connections
+2025-02-14 13:30:58.978 UTC [80] ERROR:  relation "_prisma_migrations" does not exist at character 126
+2025-02-14 13:30:58.978 UTC [80] STATEMENT:  SELECT "id", "checksum", "finished_at", "migration_name", "logs", "rolled_back_at", "started_at", "applied_steps_count" FROM "_prisma_migrations" ORDER BY "started_at" ASC
+2025-02-14 13:30:59.096 UTC [81] FATAL:  terminating connection due to administrator command
+2025-02-14 13:30:59.198 UTC [66] LOG:  checkpoint starting: immediate force wait
+2025-02-14 13:30:59.231 UTC [66] LOG:  checkpoint complete: wrote 6 buffers (0.0%); 1 WAL file(s) added, 0 removed, 0 recycled; write=0.002 s, sync=0.001 s, total=0.033 s; sync files=5, longest=0.001 s, average=0.001 s; distance=4258 kB, estimate=4258 kB; lsn=0/1D3B8E0, redo lsn=0/1D3B8A8

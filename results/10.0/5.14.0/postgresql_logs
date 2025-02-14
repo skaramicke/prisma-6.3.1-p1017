@@ -25,11 +25,11 @@ Success. You can now start the database server using:
 
     pg_ctl -D /var/lib/postgresql/data/pgdata -l logfile start
 
-waiting for server to start....2025-02-14 08:53:31.079 UTC [43] LOG:  listening on IPv6 address "::1", port 5432
-2025-02-14 08:53:31.079 UTC [43] LOG:  listening on IPv4 address "127.0.0.1", port 5432
-2025-02-14 08:53:31.081 UTC [43] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
-2025-02-14 08:53:31.088 UTC [44] LOG:  database system was shut down at 2025-02-14 08:53:30 UTC
-2025-02-14 08:53:31.094 UTC [43] LOG:  database system is ready to accept connections
+waiting for server to start....2025-02-14 13:04:51.706 UTC [43] LOG:  listening on IPv6 address "::1", port 5432
+2025-02-14 13:04:51.706 UTC [43] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2025-02-14 13:04:51.708 UTC [43] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+2025-02-14 13:04:51.715 UTC [44] LOG:  database system was shut down at 2025-02-14 13:04:51 UTC
+2025-02-14 13:04:51.718 UTC [43] LOG:  database system is ready to accept connections
  done
 server started
 CREATE DATABASE
@@ -39,28 +39,28 @@ CREATE ROLE
 
 /usr/local/bin/docker-entrypoint.sh: ignoring /docker-entrypoint-initdb.d/*
 
-waiting for server to shut down....2025-02-14 08:53:31.490 UTC [43] LOG:  received fast shutdown request
-2025-02-14 08:53:31.491 UTC [43] LOG:  aborting any active transactions
-2025-02-14 08:53:31.492 UTC [43] LOG:  worker process: logical replication launcher (PID 50) exited with exit code 1
-2025-02-14 08:53:31.493 UTC [45] LOG:  shutting down
-2025-02-14 08:53:31.504 UTC [43] LOG:  database system is shut down
+waiting for server to shut down....2025-02-14 13:04:52.085 UTC [43] LOG:  received fast shutdown request
+2025-02-14 13:04:52.086 UTC [43] LOG:  aborting any active transactions
+2025-02-14 13:04:52.087 UTC [43] LOG:  worker process: logical replication launcher (PID 50) exited with exit code 1
+2025-02-14 13:04:52.088 UTC [45] LOG:  shutting down
+2025-02-14 13:04:52.096 UTC [43] LOG:  database system is shut down
  done
 server stopped
 
 PostgreSQL init process complete; ready for start up.
 
-2025-02-14 08:53:31.619 UTC [1] LOG:  listening on IPv4 address "0.0.0.0", port 5432
-2025-02-14 08:53:31.619 UTC [1] LOG:  listening on IPv6 address "::", port 5432
-2025-02-14 08:53:31.625 UTC [1] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
-2025-02-14 08:53:31.637 UTC [70] LOG:  database system was shut down at 2025-02-14 08:53:31 UTC
-2025-02-14 08:53:31.642 UTC [1] LOG:  database system is ready to accept connections
-2025-02-14 08:53:37.952 UTC [86] ERROR:  relation "_prisma_migrations" does not exist at character 126
-2025-02-14 08:53:37.952 UTC [86] STATEMENT:  SELECT "id", "checksum", "finished_at", "migration_name", "logs", "rolled_back_at", "started_at", "applied_steps_count" FROM "_prisma_migrations" ORDER BY "started_at" ASC
-2025-02-14 08:53:38.317 UTC [86] ERROR:  syntax error at or near "WITH" at character 89
-2025-02-14 08:53:38.317 UTC [86] STATEMENT:  DROP DATABASE IF EXISTS "prisma_migrate_shadow_db_90536f10-18a9-45bb-aa4a-98e9fc920af5" WITH (FORCE)
-2025-02-14 08:53:38.834 UTC [86] ERROR:  syntax error at or near "WITH" at character 89
-2025-02-14 08:53:38.834 UTC [86] STATEMENT:  DROP DATABASE IF EXISTS "prisma_migrate_shadow_db_dfa6b21b-6526-4b9a-bf66-1edda1d2239f" WITH (FORCE)
-2025-02-14 08:53:39.406 UTC [86] ERROR:  syntax error at or near "WITH" at character 89
-2025-02-14 08:53:39.406 UTC [86] STATEMENT:  DROP DATABASE IF EXISTS "prisma_migrate_shadow_db_5b0e1a23-834a-4eb1-86bd-7a52cb428554" WITH (FORCE)
-2025-02-14 08:53:39.955 UTC [86] ERROR:  syntax error at or near "WITH" at character 89
-2025-02-14 08:53:39.955 UTC [86] STATEMENT:  DROP DATABASE IF EXISTS "prisma_migrate_shadow_db_eb4f6488-5d87-48bc-b03b-27f099f50ec4" WITH (FORCE)
+2025-02-14 13:04:52.193 UTC [1] LOG:  listening on IPv4 address "0.0.0.0", port 5432
+2025-02-14 13:04:52.193 UTC [1] LOG:  listening on IPv6 address "::", port 5432
+2025-02-14 13:04:52.195 UTC [1] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+2025-02-14 13:04:52.205 UTC [70] LOG:  database system was shut down at 2025-02-14 13:04:52 UTC
+2025-02-14 13:04:52.209 UTC [1] LOG:  database system is ready to accept connections
+2025-02-14 13:04:58.283 UTC [84] ERROR:  relation "_prisma_migrations" does not exist at character 126
+2025-02-14 13:04:58.283 UTC [84] STATEMENT:  SELECT "id", "checksum", "finished_at", "migration_name", "logs", "rolled_back_at", "started_at", "applied_steps_count" FROM "_prisma_migrations" ORDER BY "started_at" ASC
+2025-02-14 13:04:58.718 UTC [84] ERROR:  syntax error at or near "WITH" at character 89
+2025-02-14 13:04:58.718 UTC [84] STATEMENT:  DROP DATABASE IF EXISTS "prisma_migrate_shadow_db_c6ab76cb-1e0e-491f-a79a-e74125e65e59" WITH (FORCE)
+2025-02-14 13:04:59.369 UTC [84] ERROR:  syntax error at or near "WITH" at character 89
+2025-02-14 13:04:59.369 UTC [84] STATEMENT:  DROP DATABASE IF EXISTS "prisma_migrate_shadow_db_e6fd0f64-a2cb-4cde-b0a5-0543c96484d9" WITH (FORCE)
+2025-02-14 13:04:59.793 UTC [84] ERROR:  syntax error at or near "WITH" at character 89
+2025-02-14 13:04:59.793 UTC [84] STATEMENT:  DROP DATABASE IF EXISTS "prisma_migrate_shadow_db_ef977741-9580-4eaf-bfe1-319304c63398" WITH (FORCE)
+2025-02-14 13:05:00.197 UTC [84] ERROR:  syntax error at or near "WITH" at character 89
+2025-02-14 13:05:00.197 UTC [84] STATEMENT:  DROP DATABASE IF EXISTS "prisma_migrate_shadow_db_0cf70d16-d141-4409-b213-a4167dca92fb" WITH (FORCE)

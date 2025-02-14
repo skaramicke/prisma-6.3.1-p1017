@@ -1,8 +1,7 @@
 # Results
-
 |  | PostgreSQL 10.0  | PostgreSQL 11.0  | PostgreSQL 12.0  | PostgreSQL 13.0  | PostgreSQL 14.0  | PostgreSQL 15.0  | PostgreSQL 16.0  | PostgreSQL 17.0  |
 | - | - | - | - | - | - | - | - | - |
-| Prisma 5.9.0  | ✅ | ✅ | ✅ | ✅ | ✅ | ❌ | ✅ | ✅ |
+| Prisma 5.9.0  | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
 | Prisma 5.10.0  | ✅ | ✅ | ✅ | ❌ | ❌ | ❌ | ❌ | ❌ |
 | Prisma 5.11.0  | ✅ | ✅ | ✅ | ❌ | ❌ | ❌ | ❌ | ❌ |
 | Prisma 5.12.0  | ✅ | ✅ | ✅ | ❌ | ❌ | ❌ | ❌ | ❌ |
@@ -21,4 +20,4 @@
 | Prisma 6.2.0  | ✅ | ✅ | ✅ | ❌ | ❌ | ❌ | ❌ | ❌ |
 | Prisma 6.2.1  | ✅ | ✅ | ✅ | ❌ | ❌ | ❌ | ❌ | ❌ |
 | Prisma 6.3.0  | ✅ | ✅ | ✅ | ❌ | ❌ | ❌ | ❌ | ❌ |
-| Prisma 6.3.1  | ✅ | ✅ | ✅ | ❌ | ❌ | ❌ | ✅ | ❌ |
+| Prisma 6.3.1  | ✅ | ✅ | ✅ | ❌ | ❌ | ❌ | ❌ | ❌ |

@@ -30,19 +30,19 @@ creating configuration files ... ok
 running bootstrap script ... ok
 performing post-bootstrap initialization ... ok
 syncing data to disk ... ok
+initdb: warning: enabling "trust" authentication for local connections
+You can change this by editing pg_hba.conf or using the option -A, or
+--auth-local and --auth-host, the next time you run initdb.
 
 
 Success. You can now start the database server using:
 
     pg_ctl -D /var/lib/postgresql/data/pgdata -l logfile start
 
-initdb: warning: enabling "trust" authentication for local connections
-You can change this by editing pg_hba.conf or using the option -A, or
---auth-local and --auth-host, the next time you run initdb.
-waiting for server to start....2025-02-14 09:16:53.731 UTC [53] LOG:  starting PostgreSQL 14.0 (Debian 14.0-1.pgdg110+1) on aarch64-unknown-linux-gnu, compiled by gcc (Debian 10.2.1-6) 10.2.1 20210110, 64-bit
-2025-02-14 09:16:53.732 UTC [53] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
-2025-02-14 09:16:53.736 UTC [54] LOG:  database system was shut down at 2025-02-14 09:16:53 UTC
-2025-02-14 09:16:53.741 UTC [53] LOG:  database system is ready to accept connections
+waiting for server to start....2025-02-14 13:23:42.771 UTC [57] LOG:  starting PostgreSQL 14.0 (Debian 14.0-1.pgdg110+1) on aarch64-unknown-linux-gnu, compiled by gcc (Debian 10.2.1-6) 10.2.1 20210110, 64-bit
+2025-02-14 13:23:42.772 UTC [57] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+2025-02-14 13:23:42.775 UTC [58] LOG:  database system was shut down at 2025-02-14 13:23:42 UTC
+2025-02-14 13:23:42.778 UTC [57] LOG:  database system is ready to accept connections
  done
 server started
 CREATE DATABASE
@@ -50,23 +50,22 @@ CREATE DATABASE
 
 /usr/local/bin/docker-entrypoint.sh: ignoring /docker-entrypoint-initdb.d/*
 
-waiting for server to shut down....2025-02-14 09:16:53.960 UTC [53] LOG:  received fast shutdown request
-2025-02-14 09:16:53.961 UTC [53] LOG:  aborting any active transactions
-2025-02-14 09:16:53.963 UTC [53] LOG:  background worker "logical replication launcher" (PID 60) exited with exit code 1
-2025-02-14 09:16:53.963 UTC [55] LOG:  shutting down
-2025-02-14 09:16:53.973 UTC [53] LOG:  database system is shut down
+2025-02-14 13:23:42.967 UTC [57] LOG:  received fast shutdown request
+waiting for server to shut down....2025-02-14 13:23:42.967 UTC [57] LOG:  aborting any active transactions
+2025-02-14 13:23:42.969 UTC [57] LOG:  background worker "logical replication launcher" (PID 64) exited with exit code 1
+2025-02-14 13:23:42.969 UTC [59] LOG:  shutting down
+2025-02-14 13:23:43.000 UTC [57] LOG:  database system is shut down
  done
 server stopped
 
 PostgreSQL init process complete; ready for start up.
 
-2025-02-14 09:16:54.078 UTC [1] LOG:  starting PostgreSQL 14.0 (Debian 14.0-1.pgdg110+1) on aarch64-unknown-linux-gnu, compiled by gcc (Debian 10.2.1-6) 10.2.1 20210110, 64-bit
-2025-02-14 09:16:54.078 UTC [1] LOG:  listening on IPv4 address "0.0.0.0", port 5432
-2025-02-14 09:16:54.078 UTC [1] LOG:  listening on IPv6 address "::", port 5432
-2025-02-14 09:16:54.080 UTC [1] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
-2025-02-14 09:16:54.084 UTC [67] LOG:  database system was shut down at 2025-02-14 09:16:53 UTC
-2025-02-14 09:16:54.090 UTC [1] LOG:  database system is ready to accept connections
-2025-02-14 09:17:00.773 UTC [82] ERROR:  relation "_prisma_migrations" does not exist at character 126
-2025-02-14 09:17:00.773 UTC [82] STATEMENT:  SELECT "id", "checksum", "finished_at", "migration_name", "logs", "rolled_back_at", "started_at", "applied_steps_count" FROM "_prisma_migrations" ORDER BY "started_at" ASC
-2025-02-14 09:17:00.917 UTC [83] FATAL:  terminating connection due to administrator command
-2025-02-14 09:17:01.275 UTC [84] FATAL:  terminating connection due to administrator command
+2025-02-14 13:23:43.079 UTC [1] LOG:  starting PostgreSQL 14.0 (Debian 14.0-1.pgdg110+1) on aarch64-unknown-linux-gnu, compiled by gcc (Debian 10.2.1-6) 10.2.1 20210110, 64-bit
+2025-02-14 13:23:43.079 UTC [1] LOG:  listening on IPv4 address "0.0.0.0", port 5432
+2025-02-14 13:23:43.079 UTC [1] LOG:  listening on IPv6 address "::", port 5432
+2025-02-14 13:23:43.081 UTC [1] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+2025-02-14 13:23:43.084 UTC [71] LOG:  database system was shut down at 2025-02-14 13:23:42 UTC
+2025-02-14 13:23:43.087 UTC [1] LOG:  database system is ready to accept connections
+2025-02-14 13:23:50.742 UTC [86] ERROR:  relation "_prisma_migrations" does not exist at character 126
+2025-02-14 13:23:50.742 UTC [86] STATEMENT:  SELECT "id", "checksum", "finished_at", "migration_name", "logs", "rolled_back_at", "started_at", "applied_steps_count" FROM "_prisma_migrations" ORDER BY "started_at" ASC
+2025-02-14 13:23:50.899 UTC [87] FATAL:  terminating connection due to administrator command

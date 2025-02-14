@@ -62,6 +62,8 @@ spec:
               value: trust
             - name: POSTGRES_INITDB_ARGS
               value: --auth-host=trust
+            - name: POSTGRES_LOGGING
+              value: all
           resources:
             requests:
               cpu: 250m

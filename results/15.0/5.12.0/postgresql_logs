@@ -29,19 +29,19 @@ selecting default time zone ... Etc/UTC
 creating configuration files ... ok
 running bootstrap script ... ok
 performing post-bootstrap initialization ... ok
-initdb: warning: enabling "trust" authentication for local connections
-initdb: hint: You can change this by editing pg_hba.conf or using the option -A, or --auth-local and --auth-host, the next time you run initdb.
 syncing data to disk ... ok
 
 
 Success. You can now start the database server using:
 
     pg_ctl -D /var/lib/postgresql/data/pgdata -l logfile start
+initdb: warning: enabling "trust" authentication for local connections
+initdb: hint: You can change this by editing pg_hba.conf or using the option -A, or --auth-local and --auth-host, the next time you run initdb.
 
-waiting for server to start....2025-02-14 09:19:41.575 UTC [52] LOG:  starting PostgreSQL 15.0 (Debian 15.0-1.pgdg110+1) on aarch64-unknown-linux-gnu, compiled by gcc (Debian 10.2.1-6) 10.2.1 20210110, 64-bit
-2025-02-14 09:19:41.578 UTC [52] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
-2025-02-14 09:19:41.585 UTC [55] LOG:  database system was shut down at 2025-02-14 09:19:41 UTC
-2025-02-14 09:19:41.589 UTC [52] LOG:  database system is ready to accept connections
+waiting for server to start....2025-02-14 13:26:19.276 UTC [52] LOG:  starting PostgreSQL 15.0 (Debian 15.0-1.pgdg110+1) on aarch64-unknown-linux-gnu, compiled by gcc (Debian 10.2.1-6) 10.2.1 20210110, 64-bit
+2025-02-14 13:26:19.277 UTC [52] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+2025-02-14 13:26:19.281 UTC [55] LOG:  database system was shut down at 2025-02-14 13:26:19 UTC
+2025-02-14 13:26:19.284 UTC [52] LOG:  database system is ready to accept connections
  done
 server started
 CREATE DATABASE
@@ -49,26 +49,29 @@ CREATE DATABASE
 
 /usr/local/bin/docker-entrypoint.sh: ignoring /docker-entrypoint-initdb.d/*
 
-waiting for server to shut down...2025-02-14 09:19:41.742 UTC [52] LOG:  received fast shutdown request
-.2025-02-14 09:19:41.743 UTC [52] LOG:  aborting any active transactions
-2025-02-14 09:19:41.744 UTC [52] LOG:  background worker "logical replication launcher" (PID 58) exited with exit code 1
-2025-02-14 09:19:41.744 UTC [53] LOG:  shutting down
-2025-02-14 09:19:41.745 UTC [53] LOG:  checkpoint starting: shutdown immediate
-2025-02-14 09:19:41.790 UTC [53] LOG:  checkpoint complete: wrote 918 buffers (5.6%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.015 s, sync=0.027 s, total=0.046 s; sync files=250, longest=0.005 s, average=0.001 s; distance=4217 kB, estimate=4217 kB
-2025-02-14 09:19:41.794 UTC [52] LOG:  database system is shut down
+waiting for server to shut down...2025-02-14 13:26:19.471 UTC [52] LOG:  received fast shutdown request
+.2025-02-14 13:26:19.473 UTC [52] LOG:  aborting any active transactions
+2025-02-14 13:26:19.474 UTC [52] LOG:  background worker "logical replication launcher" (PID 58) exited with exit code 1
+2025-02-14 13:26:19.474 UTC [53] LOG:  shutting down
+2025-02-14 13:26:19.475 UTC [53] LOG:  checkpoint starting: shutdown immediate
+2025-02-14 13:26:19.505 UTC [53] LOG:  checkpoint complete: wrote 918 buffers (5.6%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.008 s, sync=0.021 s, total=0.032 s; sync files=250, longest=0.009 s, average=0.001 s; distance=4217 kB, estimate=4217 kB
+2025-02-14 13:26:19.509 UTC [52] LOG:  database system is shut down
  done
 server stopped
 
 PostgreSQL init process complete; ready for start up.
 
-2025-02-14 09:19:41.861 UTC [1] LOG:  starting PostgreSQL 15.0 (Debian 15.0-1.pgdg110+1) on aarch64-unknown-linux-gnu, compiled by gcc (Debian 10.2.1-6) 10.2.1 20210110, 64-bit
-2025-02-14 09:19:41.861 UTC [1] LOG:  listening on IPv4 address "0.0.0.0", port 5432
-2025-02-14 09:19:41.861 UTC [1] LOG:  listening on IPv6 address "::", port 5432
-2025-02-14 09:19:41.865 UTC [1] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
-2025-02-14 09:19:41.871 UTC [67] LOG:  database system was shut down at 2025-02-14 09:19:41 UTC
-2025-02-14 09:19:41.876 UTC [1] LOG:  database system is ready to accept connections
-2025-02-14 09:19:48.496 UTC [79] ERROR:  relation "_prisma_migrations" does not exist at character 126
-2025-02-14 09:19:48.496 UTC [79] STATEMENT:  SELECT "id", "checksum", "finished_at", "migration_name", "logs", "rolled_back_at", "started_at", "applied_steps_count" FROM "_prisma_migrations" ORDER BY "started_at" ASC
-2025-02-14 09:19:48.679 UTC [80] FATAL:  terminating connection due to administrator command
-2025-02-14 09:19:48.781 UTC [65] LOG:  checkpoint starting: immediate force wait
-2025-02-14 09:19:48.826 UTC [65] LOG:  checkpoint complete: wrote 6 buffers (0.0%); 1 WAL file(s) added, 0 removed, 0 recycled; write=0.003 s, sync=0.003 s, total=0.046 s; sync files=5, longest=0.002 s, average=0.001 s; distance=4217 kB, estimate=4217 kB
+2025-02-14 13:26:19.586 UTC [1] LOG:  starting PostgreSQL 15.0 (Debian 15.0-1.pgdg110+1) on aarch64-unknown-linux-gnu, compiled by gcc (Debian 10.2.1-6) 10.2.1 20210110, 64-bit
+2025-02-14 13:26:19.586 UTC [1] LOG:  listening on IPv4 address "0.0.0.0", port 5432
+2025-02-14 13:26:19.586 UTC [1] LOG:  listening on IPv6 address "::", port 5432
+2025-02-14 13:26:19.588 UTC [1] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+2025-02-14 13:26:19.593 UTC [67] LOG:  database system was shut down at 2025-02-14 13:26:19 UTC
+2025-02-14 13:26:19.596 UTC [1] LOG:  database system is ready to accept connections
+2025-02-14 13:26:26.713 UTC [78] ERROR:  relation "_prisma_migrations" does not exist at character 126
+2025-02-14 13:26:26.713 UTC [78] STATEMENT:  SELECT "id", "checksum", "finished_at", "migration_name", "logs", "rolled_back_at", "started_at", "applied_steps_count" FROM "_prisma_migrations" ORDER BY "started_at" ASC
+2025-02-14 13:26:26.914 UTC [79] FATAL:  terminating connection due to administrator command
+2025-02-14 13:26:27.016 UTC [65] LOG:  checkpoint starting: immediate force wait
+2025-02-14 13:26:27.073 UTC [65] LOG:  checkpoint complete: wrote 6 buffers (0.0%); 1 WAL file(s) added, 0 removed, 0 recycled; write=0.004 s, sync=0.002 s, total=0.057 s; sync files=5, longest=0.001 s, average=0.001 s; distance=4217 kB, estimate=4217 kB
+2025-02-14 13:26:27.242 UTC [80] FATAL:  terminating connection due to administrator command
+2025-02-14 13:26:27.343 UTC [65] LOG:  checkpoint starting: immediate force wait
+2025-02-14 13:26:27.362 UTC [65] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 1 recycled; write=0.002 s, sync=0.002 s, total=0.020 s; sync files=4, longest=0.001 s, average=0.001 s; distance=4218 kB, estimate=4218 kB

@@ -52,7 +52,7 @@ npx -y prisma@$prisma_version init
 cat models.txt >> ./prisma/schema.prisma
 
 # Run `npx prisma@<prisma_version> migrate dev --name init > ./results/<postgresql_version>/<prisma_version>/migrate_dev_init`
-npx prisma@$prisma_version migrate dev --name init > "$result_dir/migrate_dev_init"
+DEBUG="*" npx prisma@$prisma_version migrate dev --name init > "$result_dir/migrate_dev_init"
 
 # Check that the tables are created
 echo "Checking that the tables are created"

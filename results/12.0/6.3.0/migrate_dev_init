@@ -2,12 +2,12 @@ Environment variables loaded from .env
 Prisma schema loaded from prisma/schema.prisma
 Datasource "db": PostgreSQL database "mydb", schema "public" at "localhost:5432"
 
-Applying migration `20250214090833_init`
+Applying migration `20250214131941_init`
 
 The following migration(s) have been created and applied from new schema changes:
 
 migrations/
-  └─ 20250214090833_init/
+  └─ 20250214131941_init/
     └─ migration.sql
 
 Your database is now in sync with your schema.
