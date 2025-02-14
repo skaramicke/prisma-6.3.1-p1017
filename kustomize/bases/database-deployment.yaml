@@ -20,7 +20,7 @@ spec:
         fsGroup: 999
       initContainers:
         - name: init-permissions
-          image: postgres:17.2
+          image: postgres:16
           command:
             - /bin/bash
             - -c
@@ -35,7 +35,7 @@ spec:
               mountPath: /var/lib/postgresql/data
       containers:
         - name: postgresql
-          image: postgres:17.2
+          image: postgres:16
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 5432

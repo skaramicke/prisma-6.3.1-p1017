@@ -1,0 +1,65 @@
+The files belonging to this database system will be owned by user "postgres".
+This user must also own the server process.
+
+The database cluster will be initialized with locale "en_US.utf8".
+The default database encoding has accordingly been set to "UTF8".
+The default text search configuration will be set to "english".
+
+Data page checksums are disabled.
+
+fixing permissions on existing directory /var/lib/postgresql/data/pgdata ... ok
+creating subdirectories ... ok
+selecting dynamic shared memory implementation ... posix
+selecting default max_connections ... 100
+selecting default shared_buffers ... 128MB
+selecting default time zone ... Etc/UTC
+creating configuration files ... ok
+running bootstrap script ... ok
+performing post-bootstrap initialization ... ok
+syncing data to disk ... ok
+
+
+Success. You can now start the database server using:
+
+    pg_ctl -D /var/lib/postgresql/data/pgdata -l logfile start
+
+initdb: warning: enabling "trust" authentication for local connections
+You can change this by editing pg_hba.conf or using the option -A, or
+--auth-local and --auth-host, the next time you run initdb.
+waiting for server to start....2025-02-14 09:06:08.451 UTC [47] LOG:  starting PostgreSQL 12.0 (Debian 12.0-2.pgdg100+1) on aarch64-unknown-linux-gnu, compiled by gcc (Debian 8.3.0-6) 8.3.0, 64-bit
+2025-02-14 09:06:08.452 UTC [47] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+2025-02-14 09:06:08.460 UTC [48] LOG:  database system was shut down at 2025-02-14 09:06:08 UTC
+2025-02-14 09:06:08.463 UTC [47] LOG:  database system is ready to accept connections
+ done
+server started
+CREATE DATABASE
+
+
+/usr/local/bin/docker-entrypoint.sh: ignoring /docker-entrypoint-initdb.d/*
+
+2025-02-14 09:06:08.638 UTC [47] LOG:  received fast shutdown request
+waiting for server to shut down....2025-02-14 09:06:08.639 UTC [47] LOG:  aborting any active transactions
+2025-02-14 09:06:08.641 UTC [47] LOG:  background worker "logical replication launcher" (PID 54) exited with exit code 1
+2025-02-14 09:06:08.641 UTC [49] LOG:  shutting down
+2025-02-14 09:06:08.649 UTC [47] LOG:  database system is shut down
+ done
+server stopped
+
+PostgreSQL init process complete; ready for start up.
+
+2025-02-14 09:06:08.747 UTC [1] LOG:  starting PostgreSQL 12.0 (Debian 12.0-2.pgdg100+1) on aarch64-unknown-linux-gnu, compiled by gcc (Debian 8.3.0-6) 8.3.0, 64-bit
+2025-02-14 09:06:08.747 UTC [1] LOG:  listening on IPv4 address "0.0.0.0", port 5432
+2025-02-14 09:06:08.747 UTC [1] LOG:  listening on IPv6 address "::", port 5432
+2025-02-14 09:06:08.749 UTC [1] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+2025-02-14 09:06:08.761 UTC [65] LOG:  database system was shut down at 2025-02-14 09:06:08 UTC
+2025-02-14 09:06:08.765 UTC [1] LOG:  database system is ready to accept connections
+2025-02-14 09:06:15.320 UTC [79] ERROR:  relation "_prisma_migrations" does not exist at character 126
+2025-02-14 09:06:15.320 UTC [79] STATEMENT:  SELECT "id", "checksum", "finished_at", "migration_name", "logs", "rolled_back_at", "started_at", "applied_steps_count" FROM "_prisma_migrations" ORDER BY "started_at" ASC
+2025-02-14 09:06:15.447 UTC [79] ERROR:  syntax error at or near "WITH" at character 89
+2025-02-14 09:06:15.447 UTC [79] STATEMENT:  DROP DATABASE IF EXISTS "prisma_migrate_shadow_db_a3b02fd4-6d8c-4191-8b98-41ef97056c7c" WITH (FORCE)
+2025-02-14 09:06:15.768 UTC [79] ERROR:  syntax error at or near "WITH" at character 89
+2025-02-14 09:06:15.768 UTC [79] STATEMENT:  DROP DATABASE IF EXISTS "prisma_migrate_shadow_db_41075a76-8a3d-4fe4-991e-39ec70e7757c" WITH (FORCE)
+2025-02-14 09:06:15.955 UTC [79] ERROR:  syntax error at or near "WITH" at character 89
+2025-02-14 09:06:15.955 UTC [79] STATEMENT:  DROP DATABASE IF EXISTS "prisma_migrate_shadow_db_ec7d23cd-f27d-492b-9555-ff92449b5971" WITH (FORCE)
+2025-02-14 09:06:16.185 UTC [79] ERROR:  syntax error at or near "WITH" at character 89
+2025-02-14 09:06:16.185 UTC [79] STATEMENT:  DROP DATABASE IF EXISTS "prisma_migrate_shadow_db_a87f618c-1ce4-4df9-9fb3-376fa0438054" WITH (FORCE)

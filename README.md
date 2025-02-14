@@ -2,6 +2,32 @@
 
 Example project for reproducing P1017 issue with Prisma 6.3.1.
 
+# Results generated with `make all_versions`
+
+|  | PostgreSQL 10.0  | PostgreSQL 11.0  | PostgreSQL 12.0  | PostgreSQL 13.0  | PostgreSQL 14.0  | PostgreSQL 15.0  | PostgreSQL 16.0  | PostgreSQL 17.0  |
+| - | - | - | - | - | - | - | - | - |
+| Prisma 5.9.0  | ✅ | ✅ | ✅ | ✅ | ✅ | ❌ | ✅ | ✅ |
+| Prisma 5.10.0  | ✅ | ✅ | ✅ | ❌ | ❌ | ❌ | ❌ | ❌ |
+| Prisma 5.11.0  | ✅ | ✅ | ✅ | ❌ | ❌ | ❌ | ❌ | ❌ |
+| Prisma 5.12.0  | ✅ | ✅ | ✅ | ❌ | ❌ | ❌ | ❌ | ❌ |
+| Prisma 5.13.0  | ✅ | ✅ | ✅ | ❌ | ❌ | ❌ | ❌ | ❌ |
+| Prisma 5.14.0  | ✅ | ✅ | ✅ | ❌ | ❌ | ❌ | ❌ | ❌ |
+| Prisma 5.15.0  | ✅ | ✅ | ✅ | ❌ | ❌ | ❌ | ❌ | ❌ |
+| Prisma 5.16.0  | ✅ | ✅ | ✅ | ❌ | ❌ | ❌ | ❌ | ❌ |
+| Prisma 5.17.0  | ✅ | ✅ | ✅ | ❌ | ❌ | ❌ | ❌ | ❌ |
+| Prisma 5.18.0  | ✅ | ✅ | ✅ | ❌ | ❌ | ❌ | ❌ | ❌ |
+| Prisma 5.19.0  | ✅ | ✅ | ✅ | ❌ | ❌ | ❌ | ❌ | ❌ |
+| Prisma 5.20.0  | ✅ | ✅ | ✅ | ❌ | ❌ | ❌ | ❌ | ❌ |
+| Prisma 5.21.0  | ✅ | ✅ | ✅ | ❌ | ❌ | ❌ | ❌ | ❌ |
+| Prisma 5.22.0  | ✅ | ✅ | ✅ | ❌ | ❌ | ❌ | ❌ | ❌ |
+| Prisma 6.0.0  | ✅ | ✅ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ |
+| Prisma 6.1.0  | ✅ | ✅ | ✅ | ❌ | ❌ | ❌ | ❌ | ❌ |
+| Prisma 6.2.0  | ✅ | ✅ | ✅ | ❌ | ❌ | ❌ | ❌ | ❌ |
+| Prisma 6.2.1  | ✅ | ✅ | ✅ | ❌ | ❌ | ❌ | ❌ | ❌ |
+| Prisma 6.3.0  | ✅ | ✅ | ✅ | ❌ | ❌ | ❌ | ❌ | ❌ |
+| Prisma 6.3.1  | ✅ | ✅ | ✅ | ❌ | ❌ | ❌ | ✅ | ❌ |
+
+
 ## Original setup process
 
 1. Install packages

@@ -1,0 +1,66 @@
+The files belonging to this database system will be owned by user "postgres".
+This user must also own the server process.
+
+The database cluster will be initialized with locale "en_US.utf8".
+The default database encoding has accordingly been set to "UTF8".
+The default text search configuration will be set to "english".
+
+Data page checksums are disabled.
+
+fixing permissions on existing directory /var/lib/postgresql/data/pgdata ... ok
+creating subdirectories ... ok
+selecting default max_connections ... 100
+selecting default shared_buffers ... 128MB
+selecting dynamic shared memory implementation ... posix
+creating configuration files ... ok
+running bootstrap script ... ok
+performing post-bootstrap initialization ... ok
+
+WARNING: enabling "trust" authentication for local connections
+You can change this by editing pg_hba.conf or using the option -A, or
+--auth-local and --auth-host, the next time you run initdb.
+syncing data to disk ... ok
+
+Success. You can now start the database server using:
+
+    pg_ctl -D /var/lib/postgresql/data/pgdata -l logfile start
+
+waiting for server to start....2025-02-14 08:29:49.628 UTC [43] LOG:  listening on IPv6 address "::1", port 5432
+2025-02-14 08:29:49.628 UTC [43] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2025-02-14 08:29:49.630 UTC [43] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+2025-02-14 08:29:49.638 UTC [44] LOG:  database system was shut down at 2025-02-14 08:29:49 UTC
+2025-02-14 08:29:49.641 UTC [43] LOG:  database system is ready to accept connections
+ done
+server started
+CREATE DATABASE
+
+CREATE ROLE
+
+
+/usr/local/bin/docker-entrypoint.sh: ignoring /docker-entrypoint-initdb.d/*
+
+waiting for server to shut down...2025-02-14 08:29:50.044 UTC [43] LOG:  received fast shutdown request
+.2025-02-14 08:29:50.045 UTC [43] LOG:  aborting any active transactions
+2025-02-14 08:29:50.047 UTC [43] LOG:  worker process: logical replication launcher (PID 50) exited with exit code 1
+2025-02-14 08:29:50.047 UTC [45] LOG:  shutting down
+2025-02-14 08:29:50.055 UTC [43] LOG:  database system is shut down
+ done
+server stopped
+
+PostgreSQL init process complete; ready for start up.
+
+2025-02-14 08:29:50.154 UTC [1] LOG:  listening on IPv4 address "0.0.0.0", port 5432
+2025-02-14 08:29:50.154 UTC [1] LOG:  listening on IPv6 address "::", port 5432
+2025-02-14 08:29:50.158 UTC [1] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+2025-02-14 08:29:50.168 UTC [70] LOG:  database system was shut down at 2025-02-14 08:29:50 UTC
+2025-02-14 08:29:50.172 UTC [1] LOG:  database system is ready to accept connections
+2025-02-14 08:29:57.487 UTC [85] ERROR:  relation "_prisma_migrations" does not exist at character 126
+2025-02-14 08:29:57.487 UTC [85] STATEMENT:  SELECT "id", "checksum", "finished_at", "migration_name", "logs", "rolled_back_at", "started_at", "applied_steps_count" FROM "_prisma_migrations" ORDER BY "started_at" ASC
+2025-02-14 08:29:58.674 UTC [85] ERROR:  syntax error at or near "WITH" at character 89
+2025-02-14 08:29:58.674 UTC [85] STATEMENT:  DROP DATABASE IF EXISTS "prisma_migrate_shadow_db_55be6d25-a467-4ef8-9420-738e61e158db" WITH (FORCE)
+2025-02-14 08:29:59.194 UTC [85] ERROR:  syntax error at or near "WITH" at character 89
+2025-02-14 08:29:59.194 UTC [85] STATEMENT:  DROP DATABASE IF EXISTS "prisma_migrate_shadow_db_dd96ab26-c068-45e9-8ae3-efaecb545d7e" WITH (FORCE)
+2025-02-14 08:29:59.695 UTC [85] ERROR:  syntax error at or near "WITH" at character 89
+2025-02-14 08:29:59.695 UTC [85] STATEMENT:  DROP DATABASE IF EXISTS "prisma_migrate_shadow_db_413b69c8-fc0d-437a-8e24-ad0a6fa16791" WITH (FORCE)
+2025-02-14 08:30:00.243 UTC [85] ERROR:  syntax error at or near "WITH" at character 89
+2025-02-14 08:30:00.243 UTC [85] STATEMENT:  DROP DATABASE IF EXISTS "prisma_migrate_shadow_db_422231f2-d40b-47bb-80f9-6e2ee16075c8" WITH (FORCE)
